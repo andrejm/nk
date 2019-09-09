@@ -1,0 +1,8 @@
+.nk-teammember {
+	&__profilepic {
+		max-width: rem-calc( 190 );
+		margin-bottom: rem-calc( 30 );
+		border: 1px solid transparent;
+		border-radius: 50%;
+	}
+}

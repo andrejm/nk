@@ -1,0 +1,30 @@
+.nk-block-grid {
+
+	&--authors {
+		.nk-block-grid__thumbnail {
+			border: 10px solid transparent;
+			border-radius: 50%;
+		}
+	}
+
+	@include breakpoint( medium ) {
+		margin-top: rem-calc( 24 );
+
+		&>.cell {
+			margin-bottom: rem-calc( 30 );
+		}
+
+		&__thumbnail {
+			padding: rem-calc( 10 5 0 0 );
+		}	
+
+		&--authors {
+			.nk-block-grid__thumbnail {
+				padding: 0;
+				&::before {
+					content: '';
+				}
+			}
+		}
+	}
+}

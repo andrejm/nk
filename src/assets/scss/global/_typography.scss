@@ -1,0 +1,23 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-transform: uppercase;
+}
+
+.section {
+	h1 {
+		transform: rotate(-5deg);
+		line-height: 0.8;
+		font-size: rem-calc( 64 );
+		margin: rem-calc( 48 0 );
+		display: inline-block;
+		text-align: center;
+	}
+}
+
+.nk-authorname {
+	font-size: 1.5em;
+}

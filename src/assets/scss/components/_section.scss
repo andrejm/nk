@@ -1,0 +1,22 @@
+.section {
+	padding: rem-calc( 16 0 );
+
+	&--color-01 {
+		background-color: $nk-color-01;
+	}
+
+	&--color-02 {
+		background-color: $nk-color-02;	
+		color: $white;	
+	}
+
+	&--color-03 {
+		background-color: $nk-color-03;	
+		color: $white;	
+	}
+
+	&--color-04 {
+		background-color: $nk-color-04;
+		color: $white;		
+	}
+}
