@@ -1,0 +1,30 @@
+.nk-logolist {
+	@include reset-list;
+
+	@include breakpoint( medium ) {
+		display: flex;
+		flex-flow: row nowrap;
+
+		&__item {
+			flex: 0 1 33%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: rem-calc( 200 );
+
+			&--full {
+				flex-basis: 100%;
+			}
+		}
+
+		&__href {
+			display: block;
+		}
+
+		&__logo {
+			padding: rem-calc( 0 5 );
+		}
+
+
+	}
+}

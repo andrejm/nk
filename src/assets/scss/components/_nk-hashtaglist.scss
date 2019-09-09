@@ -1,0 +1,16 @@
+.nk-hashtaglist {
+	@include reset-list;
+
+	display: flex;
+	flex-flow: row wrap;
+
+	&__item {
+		margin-right: rem-calc( 16 );
+	}
+
+	@include breakpoint( medium ) {
+		&__item {
+			margin-right: rem-calc( 32 );
+		}	
+	}
+}
