@@ -63,8 +63,9 @@
 // @include motion-ui-transitions;
 // @include motion-ui-animations;
 
+@import 'global/common';
 @import 'global/fonts';
-@import 'global/typography';
 @import 'global/mixins';
+@import 'global/typography';
 @import 'global/coloring';
 @import 'components/*.scss';

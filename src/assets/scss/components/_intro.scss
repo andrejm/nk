@@ -1,0 +1,50 @@
+.intro {
+	&__title {
+		display: flex;
+		align-items: center;
+	}
+
+	&__visual {
+
+	}
+
+	&__text {
+		// padding-top: rem-calc( 60 );
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+	}
+
+	@include breakpoint( medium ) {
+		&__title {
+			width: 50%;
+		}
+
+		&__visual {
+			width: 50%;
+		}
+
+		&__text {
+			// padding-top: rem-calc( 60 );
+		}			
+	}
+
+	@include breakpoint( large ) {
+		&__title {
+			display: flex;
+			align-items: center;
+			width: 25%;
+		}
+
+		&__visual {
+			width: 40%;
+
+		}
+
+		&__text {
+			// padding-top: rem-calc( 60 );
+			width: 35%;
+			// margin-top: rem-calc( -20 );
+		}			
+	}
+}
