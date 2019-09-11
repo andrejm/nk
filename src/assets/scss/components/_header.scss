@@ -1,0 +1,15 @@
+.header {
+	background-color: $nk-color-01;
+
+	.cell {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	@include breakpoint( large ) {
+		.cell {
+			justify-content: flex-start;
+		}	
+	}
+}

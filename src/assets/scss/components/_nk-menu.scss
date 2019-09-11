@@ -1,0 +1,31 @@
+.nk-menu {
+	@include reset-list();
+
+	&__item {
+		font-size: rem-calc( 28 ); 
+		color: $nk-color-03;
+		text-transform: uppercase;
+		font-family: $header-font-family;
+		text-align: center;
+	}
+
+	&-wrapper {
+		order: 999;
+	}
+
+	@include breakpoint( large ) {
+		display: flex;
+		flex-flow: row nowrap;
+
+		&-wrapper {
+			order: unset;
+		}
+
+		&__item {
+			font-size: rem-calc( 36 ); //h2 size
+		}
+	}
+
+	@include breakpoint( xlarge ) {
+	}
+}
