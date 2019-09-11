@@ -1,0 +1,14 @@
+.nk-imagesection {
+	min-height: rem-calc( 250 );
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center top;
+
+	@include breakpoint( medium ) {
+		min-height: rem-calc( 400 );
+	}
+
+	@include breakpoint( large ) {
+		min-height: rem-calc( 560 );	
+	}
+}
