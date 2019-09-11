@@ -1,5 +1,6 @@
 .header {
 	background-color: $nk-color-01;
+	padding-top: rem-calc( 20 );
 
 	.cell {
 		display: flex;
@@ -7,9 +8,40 @@
 		align-items: center;
 	}
 
+
 	@include breakpoint( large ) {
 		.cell {
 			justify-content: flex-start;
+		}
+
+		&__supportbutton {
+			&.cell {
+				justify-content: flex-end;
+			}
+		}
+
+		&__logo {
+			max-width: rem-calc( 110 );
 		}	
+	}
+
+	@include breakpoint( xlarge ) {
+
+		&__logo.cell {
+			@include xy-cell( 1, $gutter-type: padding );
+			margin: 0;
+		}
+
+		&__menu.cell {
+			@include xy-cell( 9, $gutter-type: padding );
+			margin: 0;
+		}
+		
+
+		&__supportbutton.cell {
+			@include xy-cell( 2, $gutter-type: padding );
+			margin: 0;
+		}
+			
 	}
 }

@@ -1,5 +1,6 @@
 .nk-menu {
 	@include reset-list();
+	flex: 1;
 
 	&__item {
 		font-size: rem-calc( 28 ); 
@@ -9,6 +10,11 @@
 		text-align: center;
 	}
 
+	&__href {
+		display: block;
+		padding: 5px;
+	}
+
 	&-wrapper {
 		order: 999;
 	}
@@ -16,16 +22,23 @@
 	@include breakpoint( large ) {
 		display: flex;
 		flex-flow: row nowrap;
+		justify-content: space-between;
+		padding: rem-calc( 0 40 );
 
 		&-wrapper {
 			order: unset;
 		}
 
-		&__item {
-			font-size: rem-calc( 36 ); //h2 size
+
+		&__href {
+			display: block;
+			padding: rem-calc( 0 20 );
 		}
 	}
 
 	@include breakpoint( xlarge ) {
+		&__item {
+			font-size: rem-calc( 36 ); //h2 size
+		}
 	}
 }
