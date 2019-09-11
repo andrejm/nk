@@ -1,6 +1,10 @@
 .section {
 	padding: rem-calc( 16 0 );
 
+	&__inner {
+		position: relative;
+	}
+
 	&--color-01 {
 		background-color: $nk-color-01;
 	}

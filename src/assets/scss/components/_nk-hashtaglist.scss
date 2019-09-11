@@ -6,11 +6,15 @@
 
 	&__item {
 		margin-right: rem-calc( 16 );
+		color: $nk-color-03;
 	}
 
 	@include breakpoint( medium ) {
+		margin-top: rem-calc( 30 );
+		
 		&__item {
 			margin-right: rem-calc( 32 );
+			font-size: rem-calc( 50 );
 		}	
 	}
 }

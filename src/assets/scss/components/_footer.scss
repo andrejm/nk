@@ -1,0 +1,11 @@
+.footer {
+	p {
+		max-width: rem-calc( 450 );
+	}
+
+	@include breakpoint( medium ) {
+		&.section {
+			padding-bottom: rem-calc( 60 );
+		}
+	}
+}
