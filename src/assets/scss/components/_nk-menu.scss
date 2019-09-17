@@ -8,6 +8,7 @@
 		text-transform: uppercase;
 		font-family: $header-font-family;
 		text-align: center;
+		letter-spacing: rem-calc( 0.5 );
 	}
 
 	&__href {
@@ -29,16 +30,24 @@
 			order: unset;
 		}
 
+		&__item {
+			font-size: rem-calc( 30 );
+		}
+
 
 		&__href {
 			display: block;
-			padding: rem-calc( 0 20 );
+			padding: rem-calc( 0 10 );
 		}
 	}
 
 	@include breakpoint( xlarge ) {
 		&__item {
-			font-size: rem-calc( 36 ); //h2 size
+			font-size: rem-calc( 32 );
+		}
+
+		&__href {
+			padding: rem-calc( 0 15 );
 		}
 	}
 }

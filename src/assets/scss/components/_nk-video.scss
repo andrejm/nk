@@ -1,0 +1,6 @@
+.nk-video {
+	@include breakpoint( medium ) {
+		margin: rem-calc( 30 0 );	
+	}
+	
+}

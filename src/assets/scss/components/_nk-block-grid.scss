@@ -7,6 +7,10 @@
 		}
 	}
 
+	&__thumbnail {
+		margin-bottom: 15px;
+	}
+
 	@include breakpoint( medium ) {
 		margin-top: rem-calc( 24 );
 
@@ -14,9 +18,11 @@
 			margin-bottom: rem-calc( 30 );
 		}
 
-		&__thumbnail {
-			padding: rem-calc( 10 5 0 0 );
-		}	
+		&.medium-up-2 > .cell {
+			width: calc(50% + 29px);
+			align-content: flex-start;
+		}
+
 
 		&--authors {
 			.nk-block-grid__thumbnail {
@@ -26,5 +32,12 @@
 				}
 			}
 		}
+	}
+
+	@include breakpoint( large ) {
+		&__thumbnail {
+			padding: rem-calc( 10 5 0 0 );
+		}	
+			
 	}
 }

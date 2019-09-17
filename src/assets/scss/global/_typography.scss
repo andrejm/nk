@@ -8,7 +8,8 @@ h6 {
 	letter-spacing: initial;
 }
 
-.section {
+.section, 
+.footer {
 	h1 {
 		transform: rotate(-5deg);
 		line-height: 0.8;
@@ -24,6 +25,16 @@ h6 {
 			@include visuallyhiddentext;
 		}
 	}
+}
+
+.like-h1 {
+	font-size: rem-calc( 36 );
+
+	@include breakpoint( medium ) {
+		font-size: rem-calc( 64 );
+		margin-bottom: rem-calc( 30 );
+	}
+
 }
 
 .nk-authorname {

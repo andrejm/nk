@@ -1,5 +1,21 @@
 .nk-logolist {
 	@include reset-list;
+	margin-bottom: rem-calc( 20 );
+
+	&__item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__logo {
+		max-width: 50%;
+	}
+	
+	&__href {
+		display: flex;
+		justify-content: center;
+	}
 
 	@include breakpoint( medium ) {
 		display: flex;
@@ -7,9 +23,7 @@
 
 		&__item {
 			flex: 0 1 33%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
+			justify-content: flex-start;
 			min-height: rem-calc( 200 );
 
 			&--full {
@@ -22,9 +36,21 @@
 		}
 
 		&__logo {
-			padding: rem-calc( 0 5 );
+			padding: rem-calc( 0 12 );
+			max-width: 100%;
+
+			.nk-logolist__item:first-of-type & {
+				padding-left: 0;
+			}
+		}
+	}
+
+	@include breakpoint( large ) {
+
+		&__item {
 		}
 
-
+		&__logo {
+		}	
 	}
 }

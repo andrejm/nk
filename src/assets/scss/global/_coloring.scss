@@ -13,3 +13,17 @@
 .c-04 {
 	color: $nk-color-04;
 }
+
+.c-black {
+	color: $black;
+}
+
+.c-white {
+	color: $white;
+}
+
+.c-h-white {
+	&:hover {
+		color: $white;
+	}
+}
