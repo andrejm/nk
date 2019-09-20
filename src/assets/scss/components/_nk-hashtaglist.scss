@@ -3,6 +3,7 @@
 
 	display: flex;
 	flex-flow: row wrap;
+	justify-content: center;
 
 	&__item {
 		margin-right: rem-calc( 16 );

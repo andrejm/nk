@@ -27,3 +27,15 @@
 		color: $white;
 	}
 }
+
+.c-link-white {
+	color: $white;
+
+	&:hover,
+	&:visited,
+	&:active,
+	&:focus {
+		color: $white;
+	}
+
+}

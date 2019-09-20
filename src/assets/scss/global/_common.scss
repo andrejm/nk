@@ -9,4 +9,25 @@ em {
 
 .grid-container {
 	position: relative;
+	padding-left: rem-calc( 30 );
+	padding-right: rem-calc( 30 );
+
+	@include breakpoint( medium ) {
+		padding-left: rem-calc( 40 );
+		padding-right: rem-calc( 40 );
+			
+	}
+}
+
+/* this is a special case in 4 tales section, to make the column fullwidth on small screen, shouldnt affect any other section */
+.grid-x {
+	&--stretch {
+		&.small-12 {
+			flex: 1 0 auto;
+
+			.cell {
+				flex: 1 0 auto;
+			}
+		}
+	}
 }
