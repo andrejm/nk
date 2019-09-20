@@ -2,6 +2,11 @@ html {
 	letter-spacing: rem-calc( -2 );
 }
 
+em {
+	font-style: normal;
+	text-transform: uppercase;
+}
+
 .grid-container {
 	position: relative;
 }
