@@ -1,11 +1,38 @@
 .header {
 	background-color: $nk-color-01;
 	padding-top: rem-calc( 20 );
+	padding-bottom: rem-calc( 20 );
 
 	.cell {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+	}
+
+	&__inner {
+		justify-content: space-between;
+	}
+
+	&--shown-on-scrollup {
+		// max-height: 0px;
+		// display: none;
+		transition: max-height 2s;
+		position: fixed;
+		top: -500px; //should not be visible on page load
+		width: 100%;
+		z-index: 1;
+		padding-top: rem-calc( 15 );
+		padding-bottom: rem-calc( 15 );
+
+		& .header__logo {
+			max-width: rem-calc( 80 );
+		}
+
+		&.active {
+			// display: block;
+			// max-height: 100%;
+			// transition: max-height 2s;
+		}
 	}
 
 

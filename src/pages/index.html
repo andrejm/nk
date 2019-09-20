@@ -21,6 +21,29 @@
       </div>
     </header>
 
+
+    <header class="header header--shown-on-scrollup js-topbar">
+      <div class="header__inner grid-container grid-x grid-padding-x">
+        <div class="header__logo small-3 medium-2 large-1 cell">
+          <img src="{{root}}assets/img/nk89-logo-cb.svg" class="header__logo" alt="Logo Nezny komiks">
+        </div>
+        <div class="header__menu small-12 hide-for-small show-for-large large-8 cell nk-menu-wrapper">
+          <ul class="nk-menu">
+            <li class="nk-menu__item"><a href="#4-pribehy" class="nk-menu__href" data-smooth-scroll>4 príbehy</a></li>
+            <li class="nk-menu__item"><a href="#4-autorske-dvojice" class="nk-menu__href" data-smooth-scroll>4 autorské dvojice</a></li>
+            <li class="nk-menu__item"><a href="#produkcia" class="nk-menu__href" data-smooth-scroll>Produkčný tím</a></li>
+            <li class="nk-menu__item"><a href="#partneri" class="nk-menu__href" data-smooth-scroll>Partneri</a></li>
+          </ul>
+        </div>
+        <div class="header__supportbutton small-7 medium-8 large-3 cell">
+          {{>_supportbutton modifier="header"}}
+        </div>
+        <div class="small-2 cell show-for-small hide-for-large">
+          MENU
+        </div>
+      </div>
+    </header>
+
     {{>_introsection}}
 
     {{>_imagesection image="predel-1" }}

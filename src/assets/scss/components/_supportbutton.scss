@@ -39,7 +39,7 @@
     		display: block;
     		position: absolute;
     	    top: rem-calc( 40 );
-    	    right: rem-calc( 40 );
+    	    right: rem-calc( 30 );
         }
         
         &--sectionbottom:not(&--header) { /* :not(&--header) added due to specificity */
