@@ -39,12 +39,13 @@ function debounce(func, wait, immediate) {
 };
 
 var $topbar = $('.js-topbar');
+var $menuToggle = $( '.js-menutoggle' );
+var $openMenuItem = $( '.nk-menu__href' );
+var menuOpenClass = 'header--open';
 var topbarHeight = 0;
-var currentScrollTop = 0,
-	$header = $( '.header' ),
-	$site = $( '.site' );
-var headerHeight = $header.outerHeight();
+var currentScrollTop = 0;
 var slideSpeed = 200;
+
 
 function slideUpTopbar() {
 	$topbar.animate({ "top": '-' + topbarHeight + 'px' }, slideSpeed );
@@ -54,28 +55,45 @@ function slideDownTopbar() {
 	$topbar.animate({ "top": "0px" }, slideSpeed );
 }
 
+function refreshTopbarHeight() {
+	return $topbar.outerHeight()
+}
+
+function closeMenu() {
+	$('.header').removeClass( menuOpenClass );
+}
+
+function openMenu() {
+	$('.header').addClass( menuOpenClass );
+	$topbar.css({ "top": "0px" });
+}
+
+function menuIsOpen() {
+	return $topbar.hasClass( menuOpenClass );
+}
+
 var fixHeader = debounce( function() {
-	console.log( $(window).scrollTop(), currentScrollTop );
+	// console.log( $(window).scrollTop(), currentScrollTop );
 	if( $(window).scrollTop() < currentScrollTop ) {
 		// console.log( 'idem hore' );
-		if( $(window).scrollTop() <= 500 ) {
+		if( $(window).scrollTop() <= $(window).height() ) {
 			//hide topbar
-			console.log( 'schovat' );
 			slideUpTopbar();
+			//if not menu open
 		} else {
 			slideDownTopbar();
 		}
 	} else {
 		// console.log( 'idem dole' );
-		slideUpTopbar();
+		if( !menuIsOpen() ) {
+			// console.log( 'schovat' );
+			slideUpTopbar();
+		}
+		// slideUpTopbar();
 	}
 
 	currentScrollTop = $(window).scrollTop();
 }, 100 );
-
-function refreshTopbarHeight() {
-	return $topbar.outerHeight()
-}
 
 
 jQuery(document).ready(function($) {
@@ -90,6 +108,19 @@ jQuery(document).ready(function($) {
 	//on screen resize refreshTopbarHeight();
 	$(window).on( 'resize', debounce( refreshTopbarHeight(), 150 ));
 
+	$menuToggle.on( 'click', function() {
+		if( $(this).parents('.header').hasClass( menuOpenClass) ) {
+			closeMenu();
+		} else {
+			openMenu();
+		}
+	} );
+
+	$openMenuItem.on( 'click', function() {
+		if( menuIsOpen ) {
+			closeMenu();
+		}
+	});
 });
 
 // jQuery(document).ready(function($) {

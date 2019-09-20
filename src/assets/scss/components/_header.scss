@@ -13,6 +13,16 @@
 		justify-content: space-between;
 	}
 
+	&__menu {
+		&.cell {
+			display: none;
+		}
+
+		.header--open &.cell {
+			display: flex;
+		}
+	}
+
 	&--shown-on-scrollup {
 		// max-height: 0px;
 		// display: none;
@@ -39,6 +49,12 @@
 	@include breakpoint( large ) {
 		.cell {
 			justify-content: flex-start;
+		}
+
+		&__menu {
+			&.cell {
+				display: flex;
+			}
 		}
 
 		&__supportbutton {
