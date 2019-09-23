@@ -1,0 +1,12 @@
+.nk-menutoggle {
+	@include visuallyhiddentext();
+
+	display: block;
+	width: 60px;
+	height: 60px;
+
+	background-image: url( '../img/menu-icon.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}

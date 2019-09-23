@@ -37,5 +37,15 @@
 	&:focus {
 		color: $white;
 	}
+}
 
+.c-link-03 {
+	color: $nk-color-03;
+
+	&:hover,
+	&:visited,
+	&:active,
+	&:focus {
+		color: $nk-color-03;
+	}
 }

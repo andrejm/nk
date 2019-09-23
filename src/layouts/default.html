@@ -6,15 +6,35 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {{>_google-analytics}}
+
+    <meta property="og:title" content="{{social.title}}" />
+    <meta property="og:image" content="{{social.img}}" />
+    <meta property="og:image:width" content="{{social.img_width}}" />
+    <meta property="og:image:height" content="{{social.img_height}}" />
+    <meta property="og:description" content="{{social.desc}}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{social.url}}" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content="{{social.url}}" />
+    <meta name="twitter:image" content="{{social.img}}" />
+    <meta name="twitter:title" content="{{social.title}}" />
+    <meta name="twitter:description" content="{{social.desc}}" />
+    
     <title>NEŽNÝ KOMIKS &#39;89</title>
+    <meta name="description" content="Séria komiksov o nežnej revolúcii určená najmä pre mladých ľudí, ale rovnako aj pre ich rodičov či starých rodičov, ktorí boli v novembri 1989 pri tom.">
+
     <link rel="icon" type="image/png" href="{{root}}assets/img/favicon.png" />
-    <link rel="stylesheet" href="{{root}}assets/css/app.css?v=20190919">
+    <link rel="stylesheet" href="{{root}}assets/css/app.css?v=20190922">
+
   </head>
-<body>
+<body id="top">
 
 {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
 {{> body}}
 
-<script src="{{root}}assets/js/app.js?v=20190919"></script>
+<script src="{{root}}assets/js/app.js?v=20190922"></script>
 </body>
 </html>

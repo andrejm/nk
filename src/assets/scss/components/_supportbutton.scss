@@ -39,7 +39,7 @@
     		display: block;
     		position: absolute;
     	    top: rem-calc( 40 );
-    	    right: rem-calc( 30 );
+    	    right: rem-calc( 50 );
         }
         
         &--sectionbottom:not(&--header) { /* :not(&--header) added due to specificity */
@@ -55,7 +55,7 @@
 	}
 
 	@include breakpoint( xxlarge ) {
-		right: rem-calc( 20 );
+		right: rem-calc( 50 );
 			
 	}
 }

@@ -6,6 +6,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		margin-bottom: rem-calc( 15 );
 	}
 
 	&__logo {
@@ -18,6 +19,13 @@
 	}
 
 	@include breakpoint( medium ) {
+		&__item {
+			margin-bottom: rem-calc( 25 );
+		}
+			
+	}
+
+	@include breakpoint( large ) {
 		display: flex;
 		flex-flow: row nowrap;
 
